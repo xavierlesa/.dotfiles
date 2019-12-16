@@ -1,0 +1,92 @@
+snippet mmodel
+	class ${1:ModelName}(models.Model):
+		"""
+		${2:docstring for $1}
+		"""
+
+		def __str__(self, *args, **kwargs):
+			return self.${3}
+
+snippet mauto
+	 models.AutoField(${1})
+
+snippet mbool
+	 models.BooleanField()
+
+snippet mchar
+	 models.CharField(max_length=${1:50})
+
+snippet mcsi
+	 models.CommaSeparatedIntegerField(max_length=${1:50})
+
+snippet mdate
+	 models.DateField(${1})
+
+snippet mdatet
+	 models.DateTimeField(${1})
+
+snippet memail
+	 models.EmailField(${1})
+
+snippet mfile
+	 models.FileField(upload_to="${1}")
+
+snippet mfilep
+	 models.FilePathField(path="${1}")
+
+snippet mfloat
+	 models.FloatField(max_digits=${1:6}, decimal_places=${2:2})
+
+snippet mimage
+	 models.ImageField(${1})
+
+snippet mint
+	 models.IntegerField(${1})
+
+snippet mipadd
+	 models.IPAddressField(${1})
+
+snippet mnull
+	 models.NullBooleanField()
+
+snippet mphone
+	 models.PhoneNumberField(${1})
+
+snippet mpint
+	 models.PositiveIntegerField(${1})
+
+snippet mspint
+	 models.PositiveSmallIntegerField(${1})
+
+snippet mslug
+	 models.SlugField(${1})
+
+snippet msint
+	 models.SmallIntegerField(${1})
+
+snippet mtext
+	 models.TextField(${1})
+
+snippet mtime
+	 models.TimeField(${1})
+
+snippet murl
+	 models.URLField(verify_exists="${1:True}"${2})
+
+snippet muss
+	 models.USStateField(${1})
+
+snippet mxml
+	 models.XMLField(schema_path="${1}"${2})
+
+snippet mfk
+	 models.ForeignKey(${1})
+
+snippet mm2m
+	 models.ManyToManyField(${1})
+
+snippet mo2o
+	 models.OneToOneField(${1})
+
+snippet mman
+	 models.Manager(${1})

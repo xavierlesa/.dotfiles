@@ -1,0 +1,28 @@
+###[user]
+##	name = Xavier
+##	email = xavierlesa@gmail.com
+#[github]
+##    user = xavierlesa
+#    user = ninjaotoko
+#	token = 08e9360376f78ab4204ffba3374a8891
+#[push]
+#	default = simple
+#[user]
+#	email = xavierlesa@gmail.com
+[user]
+	name = xavierlesa
+	email = xavierlesa@gmail.com
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	d = difftool
+	b = branch
+	s = status
+    l = log --graph --abbrev-commit --decorate --date=relative --all --oneline
+    lg = log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    co = checkout
+    ci = commit
+[core]
+	excludesfile = /Users/xavier/.global_ignore
