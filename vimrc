@@ -7,6 +7,9 @@ filetype on
 filetype plugin on
 
 autocmd BufNewFile,BufRead *.conf,*.config set syntax=conf
+" add yaml stuffs
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " Terminal init {{{ 
 " Options:
@@ -59,6 +62,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'ianks/vim-tsx'
+" Plug 'leafOfTree/vim-vue-plugin'
 
 " Lint
 Plug 'https://github.com/dense-analysis/ale'
@@ -96,8 +100,8 @@ let g:ale_open_list = 1
 let g:ale_keep_list_window_open = 0
 let g:ale_list_window_size = 5
 " signos de mensajes
-let g:ale_sign_error = '●' " Less aggressive than the default '>>'
-let g:ale_sign_warning = '.'
+let g:ale_sign_error = '*' " '●'  Less aggressive than the default '>>'
+let g:ale_sign_warning = '!'
 " no muestra nada al abrir el file
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'never'
@@ -126,7 +130,7 @@ let g:ale_completion_tsserver_autoimport = 1
 let b:ale_fixers = ['prettier', 'eslint']
 
 " Indent
-autocmd BufNewFile,BufRead *.js set tabstop=2 shiftwidth=2 expandtab
+autocmd BufNewFile,BufRead *.js,*.ts,*.vue,*.jsx set ts=2 sw=2 sts=2 expandtab
 
 " }}}
 
@@ -142,8 +146,8 @@ set statusline+=%{gutentags#statusline()}
 let g:airline_powerline_fonts = 1
 
 " theme
-"let g:airline_theme='dark'
-let g:airline_theme='base16_bright'
+let g:airline_theme='badwolf'
+"let g:airline_theme='base16_bright'
 "let g:airline_theme='base16_monokai'
 "let g:airline_theme = 'molokai'
 
