@@ -164,6 +164,9 @@ let g:webdevicons_enable_ctrlp = 1
 let g:webdevicons_enable_airline_tabline = 1
 let g:webdevicons_enable_airline_statusline = 1
 
+" YCM
+let g:ycm_autoclose_preview_window_after_insertion = 0
+
 " [KEY]MAPS
 "let mapleader=' ' " <space> como Leader 
 nmap <C-n> :NERDTreeToggle<CR>
